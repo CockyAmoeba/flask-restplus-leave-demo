@@ -4,6 +4,8 @@ import os
 # local imports
 from config import app_config
 from app.restplus import api_v1
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy()
 
 
 def create_app(config_name):
@@ -18,5 +20,7 @@ def create_app(config_name):
     modules.init_app(app)
 
     app.register_blueprint(blueprint)
+
+    db.init_app(app)
 
     return app
