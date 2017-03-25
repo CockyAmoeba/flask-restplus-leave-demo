@@ -1,8 +1,13 @@
 from . import users
+from . import roles
 
 
 def init_app(app):
     """
-    Application extensions initialization.
+    Application modules initialization.
     """
-    users.init_app(app)
+    for module in (
+            users,
+            roles
+    ):
+        module.init_app(app)

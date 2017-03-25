@@ -11,7 +11,8 @@ The goals set for this example:
 * RESTful API server should be self-documented using OpenAPI (fka Swagger)
   specifications, so interactive documentation UI is in place;
 * Authentication is handled with Basic Auth and rudimentary roles queries.
-  This can later be swapped out for OAuth2 
+  This can later be swapped out for OAuth2
+* Request Args validation
 * Testing with pytest
 * Usage of SQLite
 * Code migrations and code first models
