@@ -28,8 +28,7 @@ def default_error_handler(e):
     message = 'An unhandled exception occurred.'
     log.exception(message)
 
-    if not settings.FLASK_DEBUG:
-        return {'message': message}, 500
+    return {'message': message}, 500
 
 
 @api_v1.errorhandler(NoResultFound)

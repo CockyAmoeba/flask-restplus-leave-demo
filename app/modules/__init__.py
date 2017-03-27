@@ -1,5 +1,6 @@
 from . import users
 from . import roles
+from . import leave
 
 
 def init_app(app):
@@ -8,6 +9,7 @@ def init_app(app):
     """
     for module in (
             users,
-            roles
+            roles,
+            leave
     ):
         module.init_app(app)

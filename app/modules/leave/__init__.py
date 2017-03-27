@@ -1,5 +1,5 @@
 """
-Roles module
+Leave Application module
 ============
 """
 

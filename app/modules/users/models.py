@@ -21,6 +21,9 @@ class User(db.Model):
     password_hash = db.Column(db.String(128))
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     create_date = db.Column(db.DateTime, default=datetime.now())
+    leave_remaining = db.Column(db.Integer, default=24)
+    leave = db.relationship('Leave', backref='user',
+                            lazy='dynamic')
 
     @property
     def password(self):

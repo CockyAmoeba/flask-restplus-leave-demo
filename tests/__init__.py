@@ -1,0 +1,4 @@
+"""
+The Application tests collection
+================================
+"""

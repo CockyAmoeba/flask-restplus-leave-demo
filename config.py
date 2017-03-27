@@ -4,6 +4,7 @@ class Config(object):
     """
     DEBUG = True
     PORT=8888
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
 
 
 class TestingConfig(Config):
@@ -12,6 +13,8 @@ class TestingConfig(Config):
     """
 
     TESTING = True
+    # Use in-memory SQLite database for testing
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
 
 
 class DevelopmentConfig(Config):
