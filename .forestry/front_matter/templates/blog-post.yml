@@ -1,4 +1,31 @@
 ---
 label: Blog Post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: desc
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: desc
+- name: author
+  type: field_group
+  config: {}
+  fields:
+  - name: test
+    type: blocks
+    label: test
+    template_types:
+    - blog-post
+    config:
+      min: 
+      max: 
+  label: author
